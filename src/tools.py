@@ -62,8 +62,8 @@ class Beam(VGroup):
         self.detector_beam = PrimalBeam(detector.get_center()[0], left=sample.get_center()[0])
 
         self.add(self.sample_beam, self.detector_beam)
-    
-    def 
+
+    def
 
 class SampleDetectorGeometry(Scene):
     def construct(self):
