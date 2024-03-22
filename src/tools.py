@@ -33,11 +33,11 @@ class Detector(Rectangle):
         self.set_fill(GREEN, opacity=1)
 
 
-class Beam(VGroup):
-    def __init__(self, right, **kwargs):
+class PrimalBeam(VGroup):
+    def __init__(self, right, left = LEFT*10,**kwargs):
         super().__init__(**kwargs)
         self.beam = Line(
-            start=LEFT * 10,
+            start=left,
             end=right,
             color=YELLOW,
         )
@@ -54,6 +54,16 @@ class Beam(VGroup):
         self.beam_halo_0.put_start_and_end_on(LEFT * 10, end)
         self.beam_halo_1.put_start_and_end_on(LEFT * 10, end)
 
+class Beam(VGroup):
+    def __init__(self, sample, detector,*vmobjects, **kwargs):
+        super().__init__(*vmobjects, **kwargs)
+
+        self.sample_beam = PrimalBeam(sample.get_center()[0])
+        self.detector_beam = PrimalBeam(detector.get_center()[0], left=sample.get_center()[0])
+
+        self.add(self.sample_beam, self.detector_beam)
+    
+    def 
 
 class SampleDetectorGeometry(Scene):
     def construct(self):
