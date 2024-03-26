@@ -1,4 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:C:/Users/hduva/py_vis/media/videos/1080p60/partial_movie_files/SampleDetector/3977891868_1450359248_223132457.mp4'
-file 'file:C:/Users/hduva/py_vis/media/videos/1080p60/partial_movie_files/SampleDetector/2852726489_2919340033_2408226980.mp4'
-file 'file:C:/Users/hduva/py_vis/media/videos/1080p60/partial_movie_files/SampleDetector/2852726489_1108255795_639075979.mp4'
